@@ -1,0 +1,22 @@
+{
+  "name": "bartificer_worldclock_js",
+  "version": "1.0.0",
+  "description": "A JavaScript API for adding live digital clocks in any timezone to a web page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbusschots/bartificer_worldclock_js.git"
+  },
+  "author": "Bart Busschots",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/bbusschots/bartificer_worldclock_js/issues"
+  },
+  "homepage": "https://github.com/bbusschots/bartificer_worldclock_js#readme",
+  "dependencies": {
+    "moment-timezone": "^0.5.11"
+  }
+}
