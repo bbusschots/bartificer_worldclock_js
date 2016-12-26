@@ -4,7 +4,9 @@
   "description": "A JavaScript API for adding live digital clocks in any timezone to a web page.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-docs": "node_modules/.bin/jsdoc --configure jsdoc.conf.json",
+    "generate-docs-dev": "node_modules/.bin/jsdoc --configure jsdoc.conf.json --private --destination ./docs-dev"
   },
   "repository": {
     "type": "git",
@@ -16,6 +18,8 @@
     "url": "https://github.com/bbusschots/bartificer_worldclock_js/issues"
   },
   "homepage": "https://github.com/bbusschots/bartificer_worldclock_js#readme",
-  "dependencies": {
+  "devDependencies": {
+    "jsdoc": "^3.4.3",
+    "minami": "^1.1.1"
   }
 }

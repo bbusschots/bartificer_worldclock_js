@@ -1,0 +1,2087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Worldclock - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="bartificer.Worldclock.html">Worldclock</a><ul class='methods'><li data-type='method'><a href="bartificer.Worldclock.html#.autoLoad">autoLoad</a></li><li data-type='method'><a href="bartificer.Worldclock.html#.suppressAutoLoading">suppressAutoLoading</a></li><li data-type='method'><a href="bartificer.Worldclock.html#$container">$container</a></li><li data-type='method'><a href="bartificer.Worldclock.html#container">container</a></li><li data-type='method'><a href="bartificer.Worldclock.html#currentMoment">currentMoment</a></li><li data-type='method'><a href="bartificer.Worldclock.html#currentTime">currentTime</a></li><li data-type='method'><a href="bartificer.Worldclock.html#option">option</a></li><li data-type='method'><a href="bartificer.Worldclock.html#start">start</a></li><li data-type='method'><a href="bartificer.Worldclock.html#stop">stop</a></li><li data-type='method'><a href="bartificer.Worldclock.html#toString">toString</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="bartificer.html">bartificer</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Worldclock</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="bartificer.html">bartificer</a>.</span>
+        
+        Worldclock
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name" id="Worldclock"><span class="type-signature"></span>new Worldclock<span class="signature">($container, options<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Transform an HTML element into a clock and build an object to represent
+it.</p>
+<p>The container for the clock will have the CSS class
+<code>bartificer-worldclock</code> added to it.</p>
+<p>The following elements will be added into the container:</p>
+<pre class="prettyprint source"><code>&lt;span class=&quot;bartificer-worldclock-hours&quot;>&lt;/span>
+&lt;span class=&quot;bartificer-worldclock-separator bartificer-worldclock-separator-hm&quot;>&lt;/span>
+&lt;span class=&quot;bartificer-worldclock-minutes&quot;>:&lt;/span>
+&lt;span class=&quot;bartificer-worldclock-separator bartificer-worldclock-separator-ms&quot;>:&lt;/span>
+&lt;span class=&quot;bartificer-worldclock-seconds&quot;>&lt;/span>
+&lt;span class=&quot;bartificer-worldclock-ampm&quot;>&lt;/span></code></pre>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>$container</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#jQuerySingleContainer">jQuerySingleContainer</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>A jQuery object representing
+the element on the page that will be converted into the clock. Note that
+this element will be emptied.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#plainObject">plainObject</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    {}
+                
+                </td>
+            
+
+            <td class="description last"><p>An optional plain object containing
+configuration options. For each supported option, there is also a
+matching data attribute which can be set on the container. Values passed
+to the constructor take precedence over values specified with data
+attributes.</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>animationTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    250
+                
+                </td>
+            
+
+            <td class="description last"><p>The time animations take
+place over in milliseconds. Must be a whole number between 0 and 1,000
+inclusive. (data attribute: <code>data-animation-time</code>)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>blinkSeparators</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"><p>Whether or not to blink
+the separator(s) every second. (data attribute: <code>data-bink-separators</code>)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>separatorOnOpacity</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#opacity">opacity</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    0.8
+                
+                </td>
+            
+
+            <td class="description last"><p>The opacity for
+separators that are 'on'. (data attribute: <code>data-separator-on-opacity</code>)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>separatorOffOpacity</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#opacity">opacity</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    0.2
+                
+                </td>
+            
+
+            <td class="description last"><p>The opacity for
+separators that are 'off'. (data attribute: <code>data-separator-off-opacity</code>)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>showAmpm</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"><p>Whether or not to show the
+AM/PM span when in 12 hour format (option <code>use12HourFormat</code> is <code>true</code>).
+(data attribute: <code>data-show-ampm</code>)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>showSeconds</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"><p>Whether or not to show
+seconds. (data attribute: <code>data-show-seconds</code>)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>timezone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#timezone">timezone</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    'LOCAL'
+                
+                </td>
+            
+
+            <td class="description last"><p>The timezone for the clock.
+(data attribute: <code>data-timezone</code>)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>use12HourFormat</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"><p>Whether or not to show
+the time in 12 hour format. (data attribute: <code>data-use12-hour-format</code>)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+<h5>Throws:</h5>
+<ul>
+        <li>
+
+<dl>
+    <dt>
+        <div class="param-desc">
+        <p>An error is thrown if the first argument is not
+present and valid, and if the second argument is present but not valid.</p>
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl>
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
+<span class="param-type">TypeError</span>
+
+
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
+
+</li>
+    
+        <li>
+
+<dl>
+    <dt>
+        <div class="param-desc">
+        <p>An error is thrown if the container has already been
+initialised as a clock.</p>
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl>
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
+<span class="param-type">Error</span>
+
+
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
+
+</li>
+    </ul>
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// convert the HTML element with the ID clock1 into a world clock with
+// all the default settings
+var myClock = new bartificer.Worldclock($('#clock1'));
+
+// convert the HTML element with the ID clock2 into a world clock using
+// the timezone Europe/Brussels and showing the seconds
+var myOtherClock = new bartificer.Worldclock(
+    $('#clock2'),
+    {
+        timezone: 'Europe/Brussels',
+        showSeconds: true
+    }
+);</code></pre>
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".autoLoad"><span class="type-signature">(static) </span>autoLoad<span class="signature">($searchSpace<span class="signature-attributes">opt</span>, options<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Array.&lt;<a href="bartificer.Worldclock.html">bartificer.Worldclock</a>>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Search a given search space for valid container elements with a class of
+<code>bartificer-worldclock-auto</code>, and call the <code>bartificer.Worldclock</code>
+constructor on each one found to turn it into a clock. If no search space
+is provided, the entire document is searched.</p>
+<p>Once a container has been initialised as a clock, the class
+<code>bartificer-worldclock-auto</code> will be removed.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>$searchSpace</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">jQuery</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    $(document)
+                
+                </td>
+            
+
+            <td class="description last"><p>A jQuery object representing the elements
+to search within.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#plainObject">plainObject</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    {}
+                
+                </td>
+            
+
+            <td class="description last"><p>A plain object containing options to pass
+to the constructor.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+<h5>Throws:</h5>
+
+        
+
+<dl>
+    <dt>
+        <div class="param-desc">
+        <p>An error is thrown if arguments are present but not
+valid.</p>
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl>
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
+<span class="param-type">TypeError</span>
+
+
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
+
+
+    
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>An array containing references to all
+the world clocks that were loaded (could be an empty array).</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array.&lt;<a href="bartificer.Worldclock.html">bartificer.Worldclock</a>></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// turn all valid elements with the class bartificer-worldclock-auto in
+// the entire document into clocks with all the default settings
+var createdClocks = bartificer.Worldclock.autoLoad();
+
+// turn all valid elements with the class bartificer-worldclock-auto
+// contained within a div with the ID main_content into world clocks
+// in 12 hour format showing AM or PM
+var createdClocks = bartificer.Worldclock.autoLoad(
+    $('div.main_content'),
+    {
+        use12HourFormat: true,
+        showAmpm: true
+    }
+);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".suppressAutoLoading"><span class="type-signature">(static) </span>suppressAutoLoading<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>A function to flag that the automatic loading of clocks into valid
+elements with the class <code>bartificer-worldclock-auto</code> when the DOM becomes
+ready should be suppressed.</p>
+<p>To have an effect, this function must be called after the API is loaded
+(or it will not exist), but before the DOM has finished loading.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>&lt;!-- Load the bartificer.Worldclock API -->
+&lt;script src="bartificer.worldclock.js">&lt;/script>
+
+&lt;!-- Prevent automatic loading of clocks -->
+&lt;script>
+  bartificer.Worldclock.suppressAutoLoading();
+&lt;/script></code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="$container"><span class="type-signature"></span>$container<span class="signature">()</span><span class="type-signature"> &rarr; {jQuery}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Get a reference to a jQuery object representing the clock's container.</p>
+<p>For conveniece, this function is also available without the leading <code>$</code>
+in the name.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="bartificer.Worldclock.html#container">bartificer.Worldclock#container</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">jQuery</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// assume myClock is an object with the prototype bartificer.Worldclock
+
+// get a jQuery object representing the container containing myClock
+var myJQueryObj = myClock.$container();
+
+// or
+var myJQueryObj = myClock.container();</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="container"><span class="type-signature"></span>container<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>A synonym for <a href="bartificer.Worldclock.html#$container"><code>bartificer.Worldclock#$container</code></a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="bartificer.Worldclock.html#$container">bartificer.Worldclock#$container</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="currentMoment"><span class="type-signature"></span>currentMoment<span class="signature">()</span><span class="type-signature"> &rarr; {Object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Get the current time in the clock's timezone as a MomentJS object.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>The current time as a MomentJS object.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// assume myClock is an object with the prototype bartificer.Worldclock
+
+// get the current moment form myClock
+var now = myClock.currentMoment();</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="currentTime"><span class="type-signature"></span>currentTime<span class="signature">()</span><span class="type-signature"> &rarr; {string}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>The current time in
+<a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 6801</a> format.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// assume myClock is an object with the prototype bartificer.Worldclock
+
+// save the current time to a string
+var isoString = myClock.currentTime();</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="option"><span class="type-signature"></span>option<span class="signature">(optName, optValue<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {*|<a href="bartificer.Worldclock.html">bartificer.Worldclock</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>An accessor method for getting and setting the value of any option.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>optName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The name of the option for which the value
+should be fetched or updated.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>optValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>An optional new value for the option.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="bartificer.Worldclock.html">bartificer.Worldclock</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+<h5>Throws:</h5>
+<ul>
+        <li>
+
+<dl>
+    <dt>
+        <div class="param-desc">
+        <p>If the first argument is not a valid option name as a
+string, an error will be thrown. For details of all supported options,
+see the documentation for the constructor.</p>
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl>
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
+<span class="param-type">Error</span>
+
+
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
+
+</li>
+    
+        <li>
+
+<dl>
+    <dt>
+        <div class="param-desc">
+        <p>If two arguments are passed, and the second argument
+is not a valid value for the option specified by the first argument an
+error will be thrown.</p>
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl>
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
+<span class="param-type">TypeError</span>
+
+
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
+
+</li>
+    </ul>
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If a single argument is passed, the
+value for the specified option will be returned. If two arguments are
+passed a reference to the calling object will be returned to facilitate
+function chaining.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">*</span>
+|
+
+<span class="param-type"><a href="bartificer.Worldclock.html">bartificer.Worldclock</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// assume myClock is an object with the prototype bartificer.Worldclock
+
+// get the timezone from the clock myClock
+var myClockTZ = myClock.option('timezone');
+
+// set the timezone on the clock myClock
+myClock.option('timezone', 'Europe/London');
+
+// set the on and off opacities on the clock myClock (using function chanining)
+myClock.option('separatorOnOpacity', 1).option('separatorOffOpacity', 0);</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="start"><span class="type-signature"></span>start<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="bartificer.Worldclock.html">bartificer.Worldclock</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Start the clock running.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>A reference to the clock the function
+was called on to facilitate function chaining.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="bartificer.Worldclock.html">bartificer.Worldclock</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// assume myClock is an object with the prototype bartificer.Worldclock
+
+// start the clock
+myClock.start();</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="stop"><span class="type-signature"></span>stop<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="bartificer.Worldclock.html">bartificer.Worldclock</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Stop the clock.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>A reference to the clock the function
+was called on to facilitate function chaining.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="bartificer.Worldclock.html">bartificer.Worldclock</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// assume myClock is an object with the prototype bartificer.Worldclock
+
+// stop the clock
+myClock.stop();</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="toString"><span class="type-signature"></span>toString<span class="signature">()</span><span class="type-signature"> &rarr; {string}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Get the current time as a string in the same format as the clock itself.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>The current time as a string.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// assume myClock is an object with the prototype bartificer.Worldclock
+
+// save the current time to a string
+var timeString = myClock.toString();</code></pre>
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Mon Dec 26 2016 23:51:51 GMT+0000 (GMT) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
