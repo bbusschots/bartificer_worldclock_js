@@ -11,9 +11,14 @@
 
   <!-- Include the bartificer.WorldClock API -->
   <script src="../lib/bartificer.worldclock.js"></script>
+
+  <!-- include the default style sheet -->
+  <link rel="stylesheet" type="text/css" href="../lib/bartificer.worldclock.default.css" />
 </head>
 <body>
 <h1><code>bartificer.Worldclock</code> Test Page</h1>
+
+<h2>Constructor/Data Attribues Tests</h2>
 <ul>
     <li>
         All Defaults (Local time): <span class="bartificer-worldclock-auto" />
@@ -28,7 +33,7 @@
         Custom Opacities (Local time): <span class="bartificer-worldclock-auto" data-separator-on-opacity="0.5" data-separator-off-opacity="0.1" />
     </li>
     <li>
-        12Hr format without AM/PM (Local time): <span class="bartificer-worldclock-auto" data-use12-hour-format="true" />
+        12Hr format without AM/PM (Local time): <span class="bartificer-worldclock-auto" data-use12-hour-format="true" data-show-ampm="false" />
     </li>
     <li>
         12Hr format with AM/PM (Local time): <span class="bartificer-worldclock-auto" data-use12-hour-format="true" data-show-ampm="true" />
@@ -43,5 +48,32 @@
         LA Time (<code>America/Los_Angeles</code>): <span class="bartificer-worldclock-auto" data-timezone="America/Los_Angeles" />
     </li>
 </ul>
+
+<h2>Block-Level Style Tests</h2>
+
+<p>Below is a clock showing the local time using a <code>div</code> tag.</p>
+<div class="bartificer-worldclock-auto"></div>
+
+<p>Below is a clock showing the local time with seconds using a <code>div</code> tag.</p>
+<div class="bartificer-worldclock-auto" data-show-seconds="true"></div>
+
+<p>Below is a clock showing the local time in 12 hour format using a <code>p</code> tag.</p>
+<p class="bartificer-worldclock-auto" data-use12-hour-format="true"></p>
+
+<p>Below is a clock showing the local time in 12 hour format with seconds using a <code>p</code> tag.</p>
+<p class="bartificer-worldclock-auto" data-use12-hour-format="true" data-show-seconds="true"></p>
+
+<p>Below is a clock showing the time in New York with a <code>h1</code> tag.</p>
+<h1 class="bartificer-worldclock-auto" data-timezone="America/New_York"></h1>
+
+<p>Below is a clock showing the time in Sydney with a <code>h2</code> tag.</p>
+<h2 class="bartificer-worldclock-auto" data-timezone="Australia/Sydney"></h2>
+
+<p>Below is a clock showing the time in Hong Kong with a <code>h3</code> tag.</p>
+<h3 class="bartificer-worldclock-auto" data-timezone="Asia/Hong_Kong"></h3>
+
+<p>Below is a clock showing the time in Johannesburg with a <code>h4</code> tag.</p>
+<h4 class="bartificer-worldclock-auto" data-timezone="Africa/Johannesburg"></h4>
+
 </body>
 </html>

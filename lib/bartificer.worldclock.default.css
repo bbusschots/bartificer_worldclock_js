@@ -1,0 +1,42 @@
+/*
+ * Default styles for the bartificer.Worldclock JavaScript API
+ */
+
+/* Common styles */
+.bartificer-worldclock{
+    color: Green;
+    background-color: Black;
+    padding: 0.25em;
+    border-radius: 0.2em;
+    border: 1px solid Green;
+    font-family: monospace;
+}
+span.bartificer-worldclock-seconds,
+span.bartificer-worldclock-separator-ms{
+    font-size: smaller;
+}
+span.bartificer-worldclock-ampm{
+    margin-left: 0.25em;
+}
+
+/* inline only */
+span.bartificer-worldclock{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 1px;
+}
+
+/* block-level only */
+div.bartificer-worldclock,
+p.bartificer-worldclock,
+h1.bartificer-worldclock,
+h2.bartificer-worldclock,
+h3.bartificer-worldclock,
+h4.bartificer-worldclock,
+h5.bartificer-worldclock,
+h6.bartificer-worldclock{
+    width: 10em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
